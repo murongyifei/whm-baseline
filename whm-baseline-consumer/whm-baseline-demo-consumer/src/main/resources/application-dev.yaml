@@ -1,5 +1,5 @@
 server:
-  port: 9494
+  port: 9495
   servlet:
     contextPath: /
   tomcat:

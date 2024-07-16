@@ -15,10 +15,12 @@
  */
 package space.whm.demo.service.impl;
 
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Service;
 import space.whm.demo.service.DemoService;
 
-@Service
+//@Service
+@DubboService
 public class DemoServiceImpl implements DemoService {
 	
 	@Override

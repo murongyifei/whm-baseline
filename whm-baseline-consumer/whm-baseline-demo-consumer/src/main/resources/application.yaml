@@ -11,3 +11,15 @@ spring:
     multipart:
       max-file-size: 500MB
       max-request-size: 1024MB
+
+dubbo:
+  application:
+    name: @project.artifactId@
+    qos-enable: false
+  registry:
+    address: nacos://nacos.whm.space:8848
+    register: false
+  protocol:
+    name: dubbo
+    port: 22223
+    host: localhost
