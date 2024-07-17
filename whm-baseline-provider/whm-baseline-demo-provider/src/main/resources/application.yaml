@@ -6,21 +6,8 @@ spring:
   application:
     name: @project.artifactId@
   profiles:
-    active: dev
+    active: dubbo
   servlet:
     multipart:
       max-file-size: 500MB
       max-request-size: 1024MB
-
-dubbo:
-  application:
-    name: @project.artifactId@
-    qos-enable: false
-  protocol:
-    id: dubbo
-    name: dubbo
-    port: 22280
-  scan:
-    base-packages: space.whm.demo
-  registry:
-    address: nacos://nacos.whm.space:8848

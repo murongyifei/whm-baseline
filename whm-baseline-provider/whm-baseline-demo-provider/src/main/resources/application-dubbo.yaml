@@ -1,0 +1,24 @@
+server:
+  port: 9494
+  servlet:
+    contextPath: /
+  tomcat:
+    uri-encoding: UTF-8
+    accept-count: 1000
+    max-connections: 5000
+    threads:
+      max:  200
+      min-spare: 20
+
+dubbo:
+  application:
+    name: @project.artifactId@
+    qos-enable: false
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 22280
+  scan:
+    base-packages: space.whm.demo
+  registry:
+    address: nacos://nacos.whm.space:8848
