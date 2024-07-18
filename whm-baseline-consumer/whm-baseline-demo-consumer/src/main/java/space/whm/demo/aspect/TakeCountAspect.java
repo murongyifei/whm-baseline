@@ -25,9 +25,12 @@ public class TakeCountAspect {
         startTime.set(System.currentTimeMillis());
     }
 
-    @After("@annotation(TakeCount)")
-    public void doAfter(JoinPoint point){
+    @After("@annotation(takeCount)")
+    public void doAfter(JoinPoint point,TakeCount takeCount){
         //记录结束时间,打印耗时日志
-        log.info("{}.{} 耗时：{}ms",point.getSignature().getDeclaringType().getSimpleName(),point.getSignature().getName(),(System.currentTimeMillis() - startTime.get()));
+        long utime = System.currentTimeMillis() - startTime.get();
+        if (utime > takeCount.time()) {
+            log.info("{}.{} 耗时：{}ms",point.getSignature().getDeclaringType().getSimpleName(),point.getSignature().getName(),(utime));
+        }
     }
 }

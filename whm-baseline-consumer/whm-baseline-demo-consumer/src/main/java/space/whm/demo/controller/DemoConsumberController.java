@@ -16,7 +16,7 @@ public class DemoConsumberController {
     @Resource
     private DemoService demoService;
 
-    @TakeCount
+    @TakeCount(time = 1000)
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam String uid) {
         return demoService.sayHello(uid);

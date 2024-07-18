@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TakeCount {
-
-    int time() default 60;
+    /**
+     * (单位毫秒)默认耗时 >1 毫秒打印日志.
+     */
+    long time() default 1;
 }
