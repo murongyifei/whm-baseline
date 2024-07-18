@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import space.whm.demo.aspect.TakeCount;
 import space.whm.demo.service.DemoService;
 
 @RestController
@@ -15,6 +16,7 @@ public class DemoConsumberController {
     @Resource
     private DemoService demoService;
 
+    @TakeCount
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam String uid) {
         return demoService.sayHello(uid);
