@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          driverClassName: com.clickhouse.jdbc.ClickHouseDriver
+          enabled: true
+          url: jdbc:clickhouse://192.168.110.61:8123/default
+          username: default
+          password: 123456
