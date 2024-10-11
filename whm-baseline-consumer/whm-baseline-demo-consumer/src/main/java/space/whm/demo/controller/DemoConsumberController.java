@@ -1,7 +1,7 @@
 package space.whm.demo.controller;
 
 //import org.apache.dubbo.config.annotation.DubboReference;
-import jakarta.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,7 +13,7 @@ import space.whm.demo.service.DemoService;
 @RequestMapping("/baseline/demo/consumer")
 public class DemoConsumberController {
     //@DubboReference
-    @Resource
+    @Autowired
     private DemoService demoService;
 
     // http://localhost:9495/baseline/demo/consumer/sayHello?uid=whm12124
