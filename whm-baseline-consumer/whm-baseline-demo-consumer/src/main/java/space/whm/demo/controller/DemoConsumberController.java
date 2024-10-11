@@ -16,6 +16,7 @@ public class DemoConsumberController {
     @Resource
     private DemoService demoService;
 
+    // http://localhost:9495/baseline/demo/consumer/sayHello?uid=whm12124
     @TakeCount(time = 10)
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam String uid) {
