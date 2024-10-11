@@ -21,4 +21,6 @@ dubbo:
   scan:
     base-packages: space.whm.demo
   registry:
-    address: nacos://nacos.whm.space:8848
+    address: nacos://nacos.whm.space:8847
+  consumer:
+    check: false

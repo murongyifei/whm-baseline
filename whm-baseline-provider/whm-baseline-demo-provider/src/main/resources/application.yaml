@@ -5,6 +5,16 @@ spring:
     allow-circular-references: true
   application:
     name: @project.artifactId@
+    cloud:
+      nacos:
+        discovery:
+          # 服务注册地址
+          server-addr: nacos.whm.space:8847
+          register-enabled: true
+          enabled: true
+        config:
+          # 配置中心地址
+          server-addr: nacos.whm.space:8847
   profiles:
     active: dubbo
   servlet:
