@@ -111,14 +111,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <!--默认源代码目录-->
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <!--默认资源目录-->
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
 </project>
