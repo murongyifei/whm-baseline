@@ -5,8 +5,14 @@ spring:
       strict: false
       datasource:
         master:
-          driverClassName: com.clickhouse.jdbc.ClickHouseDriver
-          enabled: true
+          driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
           url: jdbc:clickhouse://192.168.110.61:8123/default
           username: default
           password: 123456
+server:
+  port: 9494
+  shutdown: graceful
+logging:
+  level:
+    root: info
+    com.lzp: debug
